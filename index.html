@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" >
+    <meta http-equiv="x-ua-compatible" content="ie=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta name="robots" content="index, follow" >
+    <meta name="theme-color" content="#f8fafc" >
+    <meta name="author" content="Lirui Luo, Guoxi Zhang, Hongming Xu, Rongqing Li, Cong Fang, Lifeng Fan" >
+    <meta name="keywords" content="continual reasoning gym, continual RLVR, shared reasoning, continual prompt replay, reinforcement learning with verifiable rewards" >
+    <meta name="description" content="Continual Reasoning Gym studies task-by-task RLVR and introduces Continual Prompt Replay, the only evaluated continual-learning method to reach multitask-RLVR-level performance on average." >
+
+    <title>Continual Reasoning Gym · Shared Reasoning in Continual RLVR</title>
+    <link rel="canonical" href="https://crg-rl.github.io/" >
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" >
+
+    <meta property="og:title" content="Continual Reasoning Gym" >
+    <meta property="og:description" content="Diagnosing and harnessing shared reasoning in continual RLVR." >
+    <meta property="og:type" content="website" >
+    <meta property="og:url" content="https://crg-rl.github.io/" >
+    <meta property="og:site_name" content="Continual Reasoning Gym Project Page" >
+    <meta property="og:image" content="https://crg-rl.github.io/assets/figures/shared-reasoning-teaser.png" >
+    <meta property="og:image:alt" content="Shared reasoning across a sequence of reasoning tasks and Continual Prompt Replay" >
+    <meta name="twitter:card" content="summary_large_image" >
+    <meta name="twitter:title" content="Continual Reasoning Gym" >
+    <meta name="twitter:description" content="Diagnosing and harnessing shared reasoning in continual RLVR." >
+    <meta name="twitter:image" content="https://crg-rl.github.io/assets/figures/shared-reasoning-teaser.png" >
+
+    <meta name="citation_title" content="Continual Reasoning Gym: Diagnosing and Harnessing Shared Reasoning in Continual RLVR" >
+    <meta name="citation_author" content="Luo, Lirui" >
+    <meta name="citation_author" content="Zhang, Guoxi" >
+    <meta name="citation_author" content="Xu, Hongming" >
+    <meta name="citation_author" content="Li, Rongqing" >
+    <meta name="citation_author" content="Fang, Cong" >
+    <meta name="citation_author" content="Fan, Lifeng" >
+    <meta name="citation_publication_date" content="2026" >
+    <meta name="citation_pdf_url" content="https://crg-rl.github.io/assets/paper/continual-reasoning-gym.pdf" >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700;750;800;850&amp;display=swap" >
+    <link rel="stylesheet" href="styles.css" >
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <div class="page-shell">
+      <nav class="top-nav" aria-label="Project navigation">
+        <div class="nav-inner">
+          <a class="nav-brand" href="#top" aria-label="Continual Reasoning Gym home">CRG</a>
+          <span class="nav-status">Preprint · 2026</span>
+          <div class="nav-links">
+            <a href="#finding">Finding</a>
+            <a href="#shared-reasoning">Shared reasoning</a>
+            <a href="#cpr">CPR</a>
+            <a href="#environment">Environment</a>
+            <a href="#bibtex">BibTeX</a>
+          </div>
+        </div>
+      </nav>
+
+      <header class="hero" id="top">
+        <div class="hero-copy">
+          <div class="eyebrow">Continual Learning · RLVR · Reasoning Models</div>
+          <h1>Continual Reasoning Gym</h1>
+          <p class="hero-subtitle">Diagnosing and Harnessing Shared Reasoning in Continual RLVR</p>
+
+          <div class="authors" role="group" aria-label="Authors">
+            <span><a href="https://liruiluo.github.io/" target="_blank" rel="noopener noreferrer">Lirui Luo</a><sup>1,2</sup></span>
+            <span class="separator">·</span>
+            <span><a href="https://guoxizhang.com/" target="_blank" rel="noopener noreferrer">Guoxi Zhang</a><sup>2</sup></span>
+            <span class="separator">·</span>
+            <span><a href="https://github.com/sbx126" target="_blank" rel="noopener noreferrer">Hongming Xu</a><sup>2</sup></span>
+            <span class="separator">·</span>
+            <span>Rongqing Li<sup>4</sup></span>
+            <span class="separator">·</span>
+            <span><a href="https://congfang-ml.github.io/" target="_blank" rel="noopener noreferrer">Cong Fang</a><sup>1,3</sup></span>
+            <span class="separator">·</span>
+            <span>Lifeng Fan<sup>2</sup></span>
+          </div>
+
+          <div class="affiliations">
+            <span><sup>1</sup>State Key Lab of General AI, Peking University</span>
+            <span><sup>2</sup>State Key Laboratory of General Artificial Intelligence, BIGAI</span>
+            <span><sup>3</sup>Institute for Artificial Intelligence, Peking University</span>
+            <span><sup>4</sup>Beijing Institute of Technology</span>
+          </div>
+
+          <div class="resource-row" role="group" aria-label="Project resources">
+            <a class="resource-chip primary" href="assets/paper/continual-reasoning-gym.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="resource-mark">PDF</span>
+              <span>Paper</span>
+            </a>
+            <span class="resource-chip pending" title="Code release in validation">
+              <span class="resource-mark">&lt;/&gt;</span>
+              <span>Code soon</span>
+            </span>
+            <a class="resource-chip" href="#bibtex">
+              <span class="resource-mark">CITE</span>
+              <span>BibTeX</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="metric-strip" role="group" aria-label="Headline results">
+          <div class="metric">
+            <strong>5</strong>
+            <span>task sequences</span>
+          </div>
+          <div class="metric">
+            <strong>30</strong>
+            <span>training stages</span>
+          </div>
+          <div class="metric">
+            <strong>0.88</strong>
+            <span>Seq. RLVR mean CTM</span>
+          </div>
+          <div class="metric accent">
+            <strong>1.03</strong>
+            <span>CPR mean CTM</span>
+          </div>
+        </div>
+
+        <figure class="hero-figure">
+          <picture>
+            <source srcset="assets/figures/shared-reasoning-teaser.webp" type="image/webp" >
+            <img src="assets/figures/shared-reasoning-teaser.png" width="2600" height="1470" alt="A current-task update gives mostly positive but some negative effects across a task sequence, while CPR combines previous and current prompts to strengthen gains across tasks." fetchpriority="high" decoding="async" >
+          </picture>
+          <figcaption>Shared reasoning explains modest forgetting. CPR harnesses it to improve learning on the arriving and future tasks.</figcaption>
+        </figure>
+      </header>
+
+      <main id="content">
+        <section class="section-card tldr-card" id="overview">
+          <div class="section-label">TL;DR</div>
+          <h2>Sequential RLVR forgets modestly, yet still trails joint training.</h2>
+          <p class="lead">
+            Continual Reasoning Gym (CRG) turns continual RLVR into a reproducible training and evaluation environment across text and visual reasoning. We identify <em>shared reasoning</em>: training on one task benefits others on average. Continual Prompt Replay (CPR) brings previous-task prompts into current-policy training to harness this pattern and is the only evaluated continual-learning method that reaches MTRL-level performance on average.
+          </p>
+        </section>
+
+        <section class="section-card" id="finding">
+          <div class="section-heading">
+            <div>
+              <div class="section-label">The key observation</div>
+              <h2>Modest forgetting does not close the MTRL gap.</h2>
+            </div>
+            <p>
+              Seq. RLVR loses little performance on earlier tasks, but final performance remains below multitask RLVR. Decomposing final performance shows that preserving earlier tasks is only part of the problem. A continual method must also improve learning on the arriving and future tasks.
+            </p>
+          </div>
+
+          <div class="finding-grid">
+            <div class="stat-card blue">
+              <span class="stat-kicker">Earlier-task change</span>
+              <strong>−2.47 pp</strong>
+              <span>mean BWT under Seq. RLVR</span>
+            </div>
+            <div class="stat-card coral">
+              <span class="stat-kicker">Final performance</span>
+              <strong>0.88</strong>
+              <span>mean continual-to-multitask ratio</span>
+            </div>
+            <div class="stat-card ink">
+              <span class="stat-kicker">Diagnosis</span>
+              <strong>Beyond retention</strong>
+              <span>the remaining gap lies in learning arriving and future tasks</span>
+            </div>
+          </div>
+
+          <figure class="figure-card medium-figure">
+            <picture>
+              <source srcset="assets/figures/modest-forgetting-mtrl-gap.webp" type="image/webp" >
+              <img src="assets/figures/modest-forgetting-mtrl-gap.png" width="1838" height="1116" loading="lazy" decoding="async" alt="Scatter plot of backward transfer and continual-to-multitask ratio for the five CRG task sequences. Points show modest forgetting while remaining below the MTRL line." >
+            </picture>
+            <figcaption>Each marker is one task sequence. Seq. RLVR remains below MTRL even where forgetting is modest.</figcaption>
+          </figure>
+        </section>
+
+        <section class="section-card" id="shared-reasoning">
+          <div class="section-heading">
+            <div>
+              <div class="section-label">Why forgetting is modest</div>
+              <h2>Reasoning structure is shared across tasks.</h2>
+            </div>
+            <p>
+              Task-gradient measurements show that updates on one reasoning task benefit other task objectives on average. The same pattern appears in model behavior: jugs performance improves before its own stage and again during later-task training, while the reasoning progresses from unresolved attempts to valid, more direct solutions.
+            </p>
+          </div>
+
+          <div class="evidence-metrics">
+            <div><strong>0.345</strong><span>mean task-gradient cosine</span></div>
+            <div><strong>82.2%</strong><span>task pairs with positive cosine</span></div>
+            <div><strong>0% → 44%</strong><span>jugs success across the sequence</span></div>
+          </div>
+
+          <div class="two-figure-grid">
+            <figure class="figure-card">
+              <picture>
+                <source srcset="assets/figures/task-gradient-alignment.webp" type="image/webp" >
+                <img src="assets/figures/task-gradient-alignment.png" width="1986" height="1672" loading="lazy" decoding="async" alt="Heatmap of pairwise task-gradient cosine similarities on the ten-task LLM algorithmic sequence." >
+              </picture>
+              <figcaption>Task gradients are positively aligned on average under Seq. RLVR.</figcaption>
+            </figure>
+            <figure class="figure-card wide-content">
+              <picture>
+                <source srcset="assets/figures/jugs-behavior.webp" type="image/webp" >
+                <img src="assets/figures/jugs-behavior.png" width="2087" height="1010" loading="lazy" decoding="async" alt="Jugs success and representative reasoning excerpts across base, pre-jugs, post-jugs, and final policies." >
+              </picture>
+              <figcaption>A jugs case illustrates shared reasoning in task performance and reasoning behavior.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section-card cpr-card" id="cpr">
+          <div class="section-heading">
+            <div>
+              <div class="section-label">Continual Prompt Replay</div>
+              <h2>Bring previous tasks back through the current policy.</h2>
+            </div>
+            <p>
+              CPR stores prompts rather than old trajectories. At each update, previous-task prompts replace part of the current-task batch, and the current policy generates fresh responses for all sampled prompts. This changes the task-sampling distribution without increasing prompt or rollout counts per update.
+            </p>
+          </div>
+
+          <ol class="method-steps">
+            <li>
+              <span class="step-number">01</span>
+              <div><strong>Retain prompts</strong><p>Keep compact prompt records from earlier tasks.</p></div>
+            </li>
+            <li>
+              <span class="step-number">02</span>
+              <div><strong>Mix tasks</strong><p>Replace part of the arriving-task batch with previous-task prompts.</p></div>
+            </li>
+            <li>
+              <span class="step-number">03</span>
+              <div><strong>Regenerate on policy</strong><p>Sample and verify fresh responses with the current policy before updating.</p></div>
+            </li>
+          </ol>
+
+          <div class="result-grid">
+            <article class="result-copy">
+              <div class="section-label">Headline result</div>
+              <h3>CPR reaches MTRL-level performance on average.</h3>
+              <div class="result-numbers">
+                <div><strong>1.03</strong><span>mean CTM</span></div>
+                <div><strong>+6.4 pp</strong><span>FinalAvg vs. Seq. RLVR</span></div>
+                <div><strong>0.43 → 0.79</strong><span>alignment with all-task mean</span></div>
+              </div>
+              <p>
+                Adding previous-task directions makes the update better aligned with the mean gradient across the full task set in all nine measured comparisons.
+              </p>
+            </article>
+            <figure class="figure-card clean-figure">
+              <picture>
+                <source srcset="assets/figures/cpr-gradient-alignment.webp" type="image/webp" >
+                <img src="assets/figures/cpr-gradient-alignment.png" width="1195" height="718" loading="lazy" decoding="async" alt="Nine paired comparisons showing that current plus previous-task gradients align more strongly with the all-task mean than the current-task gradient alone." >
+              </picture>
+              <figcaption>Previous-task gradients better align updates with the full task set.</figcaption>
+            </figure>
+          </div>
+
+          <div class="ablation-grid">
+            <figure class="figure-card clean-figure">
+              <picture>
+                <source srcset="assets/figures/current-policy-regeneration.webp" type="image/webp" >
+                <img src="assets/figures/current-policy-regeneration.png" width="1241" height="821" loading="lazy" decoding="async" alt="Bar chart comparing no replay, stale sample replay, and CPR on LLM algorithmic reasoning." >
+              </picture>
+              <figcaption>Only prompt replay with current-policy regeneration improves over no replay in this comparison.</figcaption>
+            </figure>
+            <div class="ablation-copy">
+              <div class="section-label">Mechanism ablation</div>
+              <h3>Current-policy regeneration matters.</h3>
+              <p>On LLM algorithmic reasoning, CPR reaches 63.3% FinalAvg. Reusing trajectories from an earlier policy reaches 47.5%, below the 49.9% no-replay result.</p>
+              <div class="mini-bars">
+                <div class="value-499"><span>No replay</span><strong>49.9</strong></div>
+                <div class="value-475"><span>Sample replay</span><strong>47.5</strong></div>
+                <div class="best value-633"><span>CPR</span><strong>63.3</strong></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" id="environment">
+          <div class="section-heading">
+            <div>
+              <div class="section-label">Continual Reasoning Gym</div>
+              <h2>Five sequences across text and visual reasoning.</h2>
+            </div>
+            <p>
+              CRG organizes related reasoning tasks into staged training streams and evaluates every stage policy across the full sequence. The environment covers two procedurally generated text settings and three VisuLogic-derived visual settings.
+            </p>
+          </div>
+
+          <div class="environment-facts">
+            <div><strong>LLM</strong><span>Algorithmic · Algebra</span></div>
+            <div><strong>VLM</strong><span>Quantitative · Spatial · Positional</span></div>
+            <div><strong>Methods</strong><span>Seq. RLVR · MTRL · 6 CL baselines · CPR</span></div>
+          </div>
+
+          <figure class="figure-card environment-figure">
+            <picture>
+              <source srcset="assets/figures/crg-environment.webp" type="image/webp" >
+              <img src="assets/figures/crg-environment.png" width="2600" height="1733" loading="lazy" decoding="async" alt="Overview of CRG task streams, RLVR rollouts, stage-wise policy updates, five task sequences, and a verifier-checked jugs example." >
+            </picture>
+            <figcaption>Policy training proceeds stage by stage through a sequence of verifiable reasoning tasks.</figcaption>
+          </figure>
+        </section>
+
+        <section class="section-card bibtex-card" id="bibtex">
+          <div class="bibtex-heading">
+            <div>
+              <div class="section-label">Citation</div>
+              <h2>BibTeX</h2>
+            </div>
+            <button type="button" data-copy-bibtex>Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{luo2026continualreasoninggym,
+  title   = {Continual Reasoning Gym: Diagnosing and Harnessing Shared Reasoning in Continual RLVR},
+  author  = {Luo, Lirui and Zhang, Guoxi and Xu, Hongming and Li, Rongqing and Fang, Cong and Fan, Lifeng},
+  journal = {arXiv preprint},
+  year    = {2026}
+}</code></pre>
+        </section>
+      </main>
+
+      <footer>
+        <span>Continual Reasoning Gym · 2026</span>
+        <span>Built for the CRG research release.</span>
+      </footer>
+    </div>
+  </body>
+</html>
