@@ -1,0 +1,6 @@
+group,group_short,suite,T,method,display_method,is_vanilla,final_avg,mtrl_final_avg,ctm,bwt,bwt_pp
+LLM algorithmic,LLM algo,LLM,10,vanilla-crl,Seq. RLVR,1,0.498500000,0.652600000,0.763867606,0.016200000,1.620000
+LLM algebra,LLM algebra,LLM,6,vanilla-crl,Seq. RLVR,1,0.882300000,0.900100000,0.980224420,-0.011300000,-1.130000
+VLM quantitative,VLM quant,VLM,4,vanilla-crl,Seq. RLVR,1,0.254800000,0.308800000,0.825129534,-0.071800000,-7.180000
+VLM spatial,VLM spatial,VLM,6,vanilla-crl,Seq. RLVR,1,0.263100000,0.316000000,0.832594937,-0.014700000,-1.470000
+VLM positional,VLM pos,VLM,4,vanilla-crl,Seq. RLVR,1,0.347400000,0.352900000,0.984414848,-0.041800000,-4.180000

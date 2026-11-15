@@ -1,0 +1,12 @@
+{
+  "public_paper": "https://arxiv.org/abs/2608.18574v3",
+  "public_pdf_sha256": "83c551ba80a32434b8fdfebfc7af521e14f232afcefeea7132c21807bd554bf5",
+  "current_author_manuscript_sha256": "b44a15a83afe1440aeb38e75aecde78288fc8c6af1ca389676737cd43d51fa64",
+  "notes": "Public paper v3 supplies research identity and headline results. Current author figure PDFs improve presentation without changing the measured results. Current and public results were checked against one another.",
+  "source_files": {
+    "sections/method.tex": "cec5df24d47b09e3706fc7d47be36c871112fc868191b439feddcd0fd28c7ceb",
+    "sections/experiments.tex": "3a3434528814b479b3825e116c3bfe5bcddf616b2107abe4eb6f71897e6cfb33",
+    "sections/appendix_gradient_diagnostics.tex": "a309dd24f4c7f5835a40c4c7145666cafe0db776d2b19564bc96960b95396517",
+    "tables/method_family_signature_table.tex": "d330b6f8c5972ecf3f8442efbbe7840d7a6b1ce1ac4e6183da99fe195fee461c"
+  }
+}

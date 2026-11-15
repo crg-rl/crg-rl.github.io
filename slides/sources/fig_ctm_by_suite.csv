@@ -1,0 +1,41 @@
+group,group_short,suite,T,method,display_method,final_avg,mtrl_final_avg,ctm
+LLM algorithmic,LLM algo,LLM,10,vanilla-crl,Seq. RLVR,0.498500000,0.652600000,0.763867606
+LLM algorithmic,LLM algo,LLM,10,fire,FIRE,0.056100000,0.652600000,0.085963837
+LLM algorithmic,LLM algo,LLM,10,redo,ReDo,0.267600000,0.652600000,0.410052099
+LLM algorithmic,LLM algo,LLM,10,ewc,EWC,0.650500000,0.652600000,0.996782102
+LLM algorithmic,LLM algo,LLM,10,muon,Muon,0.574400000,0.652600000,0.880171621
+LLM algorithmic,LLM algo,LLM,10,osft,OSFT,0.373100000,0.652600000,0.571713147
+LLM algorithmic,LLM algo,LLM,10,prompt_replay,CPR,0.633300000,0.652600000,0.970425988
+LLM algorithmic,LLM algo,LLM,10,kl_to_old_policy_old_prompts,KL-to-old-policy,0.553700000,0.652600000,0.848452344
+LLM algebra,LLM algebra,LLM,6,vanilla-crl,Seq. RLVR,0.882300000,0.900100000,0.980224420
+LLM algebra,LLM algebra,LLM,6,prompt_replay,CPR,0.904200000,0.900100000,1.004555049
+LLM algebra,LLM algebra,LLM,6,osft,OSFT,0.884100000,0.900100000,0.982224197
+LLM algebra,LLM algebra,LLM,6,fire,FIRE,0.803300000,0.900100000,0.892456394
+LLM algebra,LLM algebra,LLM,6,redo,ReDo,0.817200000,0.900100000,0.907899122
+LLM algebra,LLM algebra,LLM,6,ewc,EWC,0.893500000,0.900100000,0.992667481
+LLM algebra,LLM algebra,LLM,6,kl_to_old_policy_old_prompts,KL-to-old-policy,0.757300000,0.900100000,0.841350961
+LLM algebra,LLM algebra,LLM,6,muon,Muon,0.847900000,0.900100000,0.942006444
+VLM quantitative,VLM quant,VLM,4,vanilla-crl,Seq. RLVR,0.254800000,0.308800000,0.825129534
+VLM quantitative,VLM quant,VLM,4,prompt_replay,CPR,0.372500000,0.308800000,1.206282383
+VLM quantitative,VLM quant,VLM,4,redo,ReDo,0.253700000,0.308800000,0.821567358
+VLM quantitative,VLM quant,VLM,4,fire,FIRE,0.004000000,0.308800000,0.012953368
+VLM quantitative,VLM quant,VLM,4,ewc,EWC,0.239800000,0.308800000,0.776554404
+VLM quantitative,VLM quant,VLM,4,muon,Muon,0.427200000,0.308800000,1.383419689
+VLM quantitative,VLM quant,VLM,4,osft,OSFT,0.037500000,0.308800000,0.121437824
+VLM quantitative,VLM quant,VLM,4,kl_to_old_policy_old_prompts,KL-to-old-policy,0.300500000,0.308800000,0.973121762
+VLM spatial,VLM spatial,VLM,6,vanilla-crl,Seq. RLVR,0.263100000,0.316000000,0.832594937
+VLM spatial,VLM spatial,VLM,6,prompt_replay,CPR,0.324600000,0.316000000,1.027215190
+VLM spatial,VLM spatial,VLM,6,redo,ReDo,0.287400000,0.316000000,0.909493671
+VLM spatial,VLM spatial,VLM,6,fire,FIRE,0.025100000,0.316000000,0.079430380
+VLM spatial,VLM spatial,VLM,6,ewc,EWC,0.247100000,0.316000000,0.781962025
+VLM spatial,VLM spatial,VLM,6,muon,Muon,0.266600000,0.316000000,0.843670886
+VLM spatial,VLM spatial,VLM,6,osft,OSFT,0.299600000,0.316000000,0.948101266
+VLM spatial,VLM spatial,VLM,6,kl_to_old_policy_old_prompts,KL-to-old-policy,0.424400000,0.316000000,1.343037975
+VLM positional,VLM pos,VLM,4,vanilla-crl,Seq. RLVR,0.347400000,0.352900000,0.984414848
+VLM positional,VLM pos,VLM,4,prompt_replay,CPR,0.332400000,0.352900000,0.941909889
+VLM positional,VLM pos,VLM,4,redo,ReDo,0.304700000,0.352900000,0.863417399
+VLM positional,VLM pos,VLM,4,fire,FIRE,0.139900000,0.352900000,0.396429583
+VLM positional,VLM pos,VLM,4,muon,Muon,0.279400000,0.352900000,0.791725701
+VLM positional,VLM pos,VLM,4,ewc,EWC,0.285500000,0.352900000,0.809011051
+VLM positional,VLM pos,VLM,4,osft,OSFT,0.224900000,0.352900000,0.637291017
+VLM positional,VLM pos,VLM,4,kl_to_old_policy_old_prompts,KL-to-old-policy,0.265100000,0.352900000,0.751204307
