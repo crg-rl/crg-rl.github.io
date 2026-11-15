@@ -150,24 +150,16 @@ def build(out,site_root):
         y=1.90+i*1.13;text(s,num,.89,y,.64,.45,size=25,color=BLUE);text(s,title,1.91,y,4.22,.50,size=27,bold=True);text(s,desc,6.29,y+.04,6.25,.62,size=20,color=MUTED)
         if i<3:line(s,1.91,y+.77,12.50,y+.77)
     notes(s,'先讲任务为什么会连续到来，再介绍 CRG 的环境和比较方式。随后诊断“少遗忘但落后”的矛盾，提出 CPR。实验用三个问题回答效果、增益来源和关键设计。','讲述路线')
-    # Background: no proposed solution.
-    s=slide();text(s,'RLVR trains reasoning with automatically verified rewards.',.72,1.52,11.9,.43,size=23,color=MUTED)
-    tasks=[('Existing skills',.80),('New API',4.51),('New requirement',8.22)]
-    for lab,x in tasks:box(s,lab,x,2.30,3.14,.83)
-    line(s,3.95,2.71,4.37,2.71,BLUE,1.4,True);line(s,7.66,2.71,8.08,2.71,BLUE,1.4,True)
-    text(s,'Multitask RLVR (MTRL)',.80,3.75,5.25,.40,size=23,bold=True)
-    text(s,'Revisit the growing task mixture\nwhenever another task arrives.',.80,4.43,5.0,1.10,size=22,color=MUTED)
-    text(s,'Continual RLVR',7.06,3.75,5.0,.40,size=23,bold=True)
-    text(s,'Update the existing model\nas each task becomes available.',7.06,4.43,5.3,1.10,size=22,color=MUTED)
-    line(s,6.33,3.65,6.33,5.65)
-    conclusion(s,'Capability expansion should not require repeating joint training.',size=23)
-    notes(s,'从部署后不断出现的新任务切入：新 API 或新需求会扩展任务集合。每次都重新在全部任务上做多任务 RLVR 成本很高。我们关注继续更新现有模型的方式。这里不讲 CPR，也不宣称当前实验是在线部署实验。','Introduction 的部署动机')
-    s=slide();text(s,'The goal is strong performance over the full task set.',.74,1.54,11.9,.44,size=23,color=MUTED)
-    labels=[('Learn the arriving task','Can the model acquire\nthe new capability?'),('Retain earlier skills','Does later training\nharm what it learned?'),('Transfer to future tasks','Does today’s learning\nhelp what comes next?')]
-    for i,(a,b) in enumerate(labels):
-        x=.78+i*4.22;text(s,f'0{i+1}',x,2.58,1,.5,size=30,color=BLUE);line(s,x,3.28,x+3.73,3.28,BLUE,1.2);text(s,a,x,3.58,3.75,.75,size=24,bold=True);text(s,b,x,4.60,3.75,1.04,size=21,color=MUTED)
-    conclusion(s,'How close can sequential learning get to a jointly trained model?',size=23)
-    notes(s,'要解决的目标有三个面：学会正在到来的任务、保留此前的能力，以及让学到的结构对未来任务有帮助。最终比较全任务平均表现，而不只比较旧任务遗忘。MTRL 作为同一任务集合的联合训练参照。','研究问题；背景不提前展开方法')
+    # Background: explanatory scenes, not text columns. No proposed solution.
+    bg=json.loads((ROOT/'slides/background-visuals.json').read_text())
+    s=slide();a=bg['growing-tasks'];assert hashlib.sha256((ROOT/a['png']).read_bytes()).hexdigest()==a['sha256']
+    visual=image(s,ROOT/a['png'],.82,1.47,11.69,4.84);visual.name='background-illustration:growing-tasks'
+    conclusion(s,'Can capability expansion avoid repeated joint training?',y=6.49,size=24)
+    notes(s,'用图直接对比两种设置。上排随着新任务到来，联合训练不断重新访问更大的任务集合；下排把现有模型传给下一个阶段，只接收当前新任务。图中的题目是推理场景图标，不对应实测成绩。RLVR 用可验证奖励训练推理，MTRL 指多任务联合 RLVR。本页只解释研究需要，不引入 CPR。','Introduction 动机；背景场景图由内置 image_gen 生成')
+    s=slide();a=bg['learning-relations'];assert hashlib.sha256((ROOT/a['png']).read_bytes()).hexdigest()==a['sha256']
+    visual=image(s,ROOT/a['png'],1.57,1.43,10.20,4.78);visual.name='background-illustration:learning-relations'
+    conclusion(s,'Learn the new task. Retain earlier skills. Help future tasks.',y=6.49,size=24)
+    notes(s,'橙色向下箭头表示只在当前任务上做训练更新；蓝色向上的三条路径表示更新后要检查的三种能力：当前任务能否学会，旧任务能否保留，未来任务能否获益。问号保留研究问题，不在背景提前宣布结果。整体目标是逐个学习后尽量接近同任务集合的联合训练。','研究问题；关系图由内置 image_gen 生成，不含 CPR 解法')
     # Contributions.
     s=slide()
     for i,(a,b,c) in enumerate([('CRG','A reusable continual-RLVR environment','Task sequences, verifiable rewards and stage-wise evaluation.'),('Shared reasoning','A diagnosis beyond forgetting','Separate transfer, direct learning and retention.'),('CPR','Continual Prompt Replay','Reuse earlier prompts to improve current-policy learning.')]):

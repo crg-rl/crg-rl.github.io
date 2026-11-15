@@ -10,7 +10,7 @@ The 17-slide, 15–16-minute talk follows: **Background → Environments → Dia
 - [Editable PPTX](assets/slides/continual-reasoning-gym-slides.pptx)
 - [Outline](slides/outline.md) and [Chinese speaker notes](slides/speaker-notes.md)
 
-The talk distinguishes CRG (the environment) from CPR (the method). It uses the original environment, task, method and jugs case figures. Native text, explanatory diagrams and result charts are editable in PowerPoint. Paper figures are high-resolution images in PPTX; the PDF preserves their original vectors where available.
+The talk distinguishes CRG (the environment) from CPR (the method). It uses the original environment, task, method and jugs case figures. Native slide text, shape-based diagrams and result charts are editable in PowerPoint. Paper figures are high-resolution images in PPTX; the PDF preserves their original vectors where available. The two Background pages use purpose-built explanatory illustrations of arriving tasks and cross-task learning relationships; these illustrations are embedded images, while their titles and short questions remain editable.
 
 ## Rebuild and verify
 

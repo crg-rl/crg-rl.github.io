@@ -1,0 +1,22 @@
+{
+  "growing-tasks": {
+    "png": "assets/slides/background/growing-tasks.png",
+    "sha256": "fcdf3b9448a08c0f880071b47a7456dda9463d2f3e9e53ffc5cc0ab88b8c1000",
+    "dimensions": [
+      1873,
+      840
+    ],
+    "purpose": "Repeated joint training versus continual updates as tasks arrive",
+    "origin": "Generated concept illustration using built-in image_gen; not an empirical result or trajectory."
+  },
+  "learning-relations": {
+    "png": "assets/slides/background/learning-relations.png",
+    "sha256": "c281e368118838f5fba9f4d1e55e6a80ae02517fdd94494763643962c12c7b90",
+    "dimensions": [
+      1717,
+      916
+    ],
+    "purpose": "How a current-task update relates to earlier, current and future tasks",
+    "origin": "Generated concept illustration using built-in image_gen; not an empirical result or trajectory."
+  }
+}

@@ -3,7 +3,9 @@
   "pages": 17,
   "talk_seconds": 915,
   "inputs": {
-    "README.md": "b70daa8ce8b60ee27267a93421a0e25834efbac3bd906a9cf8e36d0173843671",
+    "README.md": "85ea346914b6cf4fb37745d7c7ab3541c828917b270094e9b647895f149391e4",
+    "assets/slides/background/growing-tasks.png": "fcdf3b9448a08c0f880071b47a7456dda9463d2f3e9e53ffc5cc0ab88b8c1000",
+    "assets/slides/background/learning-relations.png": "c281e368118838f5fba9f4d1e55e6a80ae02517fdd94494763643962c12c7b90",
     "assets/slides/figures/alignment.pdf": "e46dcedbacc171b77db7af28c1d6105b50c188eb85d51099c28985e77ff108ad",
     "assets/slides/figures/alignment.png": "8fe8a530f6e94523a1841631dcb63a480b995ff01833ac25d5040d215ba118eb",
     "assets/slides/figures/case.pdf": "f287b5c8bea305a9f9715e784d9d501ac4206d970778aaaa8b4cde44b4ebc423",
@@ -20,25 +22,26 @@
     "assets/slides/figures/tasks.png": "4e5adceedd91bcae55a45e62ae06abbea2bb513cf975b45349254d8c37bf5419",
     "assets/slides/pku-logo.png": "aa1e5ca1b07cf0bfdcacb3bf32727e1cc7ac0d5f4b732e348e76333ba3dcd165",
     "index.html": "3cb07e420081ada4e59cac0439ad5ba1330f9541af0bc9eebc1d5a697df7b211",
-    "scripts/build_slides.py": "21e8d63ef4a0cf8aacfa3c94b6a7115552f7d64710ac13c20bce277e345ae1dd",
+    "scripts/build_slides.py": "b8ec9247ea6c1ad3c920f4703f3901a9598fb941846eebc370971956d3d14e90",
     "scripts/check_browser.py": "8a37aa84bc125497a95249f918be1d6ab7f05e1ec8dfc5ba41667b6bf625e65b",
-    "scripts/freeze_slides_release.py": "9831267d93da206872e3856d51f9fd1f6d6b719d3a3e0ffe8a94bd7aba918692",
+    "scripts/freeze_slides_release.py": "b64709f0682f111664022676b11c442eac3137cbdcff8933bc829011280f4c25",
     "scripts/render_slide_previews.py": "f4cc9729a3fca0d1199fbeb39cf109569c85f8c9269a9ecc1ef029e152600be9",
     "scripts/render_slides_pdf.py": "a5abd4fae06c02f2fabe38c7a0fb68fa9c33696526b93b8f324e3dc746d83ef5",
-    "scripts/slide_story.py": "92adda6c5fa4da6c0a60798c4dbd05db5e2fd55db6603bf52131577be78ce54d",
-    "scripts/test_build.py": "3a6dbe309eae90a1bb7cb4c83117096291100ec6cba676ce4193f2635f26ff4a",
-    "scripts/validate_artifacts.py": "81b332c5cfa26c958c6ec4bfe75cea5105127c0d0a99325699550b813c53b9f0",
+    "scripts/slide_story.py": "1576862ffb2d8428413fb718b51bc91c2d087b0f18ca3604fff72ff0e5b422cf",
+    "scripts/test_build.py": "7597851d641a584b92e65e5eb8d7524ef05df6bd06e43f305ad48e97fadbb5e2",
+    "scripts/validate_artifacts.py": "5a49c93014bac0b87b49a3afb7987f1c2512e455f5d96910e41df10c84d3eb1c",
+    "slides/background-visuals.json": "575af141a40e18a15361105be440ad02a881930935c8e29f3e629d3659c27f6a",
     "slides/figure-assets.json": "cfef27ed5ff3c8eda47b4c1f4022f6eab3d19886943e6707a1fd6fdc75d82d63",
-    "slides/outline.md": "b58276f6af3d6b49fbaf530a721c4c876d709b397c6c7298810a46a15837ad57",
+    "slides/outline.md": "4cda0ee60c834469ec814a52ea5a07554b92a865be4d915e4ae012bce04fc4d0",
     "slides/sources/fig_ctm_by_suite.csv": "77e79d3ae0258eb3b2f6388f6fa53169a25613291517b0a66f27f5d6c63eaa00",
     "slides/sources/fig_method_source_deltas.csv": "3d36bf5967d92a50bd51ca25d5812e71de694d62185b96f3e6f4598590421080",
     "slides/sources/fig_transfer_corr.csv": "7c62bf9ffb98ff09953de27f2661a3ec6ff2bceb0f78eeeb9f230987dd6709de",
     "slides/sources/manifest.json": "eff1974c8c695b7cb20b6d1d63069bbd4596dbd009d647693530071a45cb553d",
     "slides/sources/method_family_signature_table.tex": "d330b6f8c5972ecf3f8442efbbe7840d7a6b1ce1ac4e6183da99fe195fee461c",
-    "slides/speaker-notes.md": "a283d133990ae9471d758bfe8377ff43ef1eb354e796b90b3bde9ee595ad7146"
+    "slides/speaker-notes.md": "90d9701c60dc1aa4b3277168c991799c242653b588834ba71bc230308223b0de"
   },
   "outputs": {
-    "assets/slides/continual-reasoning-gym-slides.pdf": "98b2b7fd50d68d3ab683a010c60ca1b5dd33b500d83dc7043b6c8b5e450832f4",
-    "assets/slides/continual-reasoning-gym-slides.pptx": "d3ec5cb004efab2b91f4c6b9bb3ba5edc172c9ba20a9a4c560f1ea3fbb25bf2a"
+    "assets/slides/continual-reasoning-gym-slides.pdf": "c01c04b70ed4bae5f30f13b5f91cd29acb9e3f655037339acdfcb54c6c965b94",
+    "assets/slides/continual-reasoning-gym-slides.pptx": "eedbddb4ccd4e1ae4ea4266d1127087da2893cf50ff384a8c2c34ae7fe8edacc"
   }
 }

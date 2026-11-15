@@ -83,6 +83,11 @@ def check(root=ROOT):
     assets=json.loads((root/'slides/figure-assets.json').read_text())
     for key,a in assets.items():
         for kind in ('pdf','png'):expect(sha(root/a[kind])==a[kind+'_sha256'],'Figure hash '+key+' '+kind)
+    bg=json.loads((root/'slides/background-visuals.json').read_text())
+    for i,key in [(2,'growing-tasks'),(3,'learning-relations')]:
+        pictures=[s for s in ppt.slides[i].shapes if s.name=='background-illustration:'+key]
+        expect(len(pictures)==1 and sha(root/bg[key]['png'])==bg[key]['sha256'],'Background visual '+key)
+        if pictures:expect(hashlib.sha256(pictures[0].image.blob).hexdigest()==bg[key]['sha256'],'Embedded background matches original '+key)
     rows=list(csv.DictReader((root/'slides/sources/fig_ctm_by_suite.csv').open()))
     expected={'CPR':'1.03','Muon':'0.97','KL-to-old-policy':'0.95','Seq. RLVR':'0.88','EWC':'0.87','ReDo':'0.78','OSFT':'0.65','FIRE':'0.29'}
     pairs=[(b.text, ppt.slides[11].shapes[i+2].text) for i,b in enumerate(ppt.slides[11].shapes) if b.has_text_frame and b.text in expected]

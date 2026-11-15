@@ -11,7 +11,7 @@ def question_label(p):return Q[p]
 rows=[
 ('Beyond Forgetting','',None,None,25),
 ('Roadmap','',None,None,20),
-('New capabilities arrive after deployment','Background',None,None,50),
+('New tasks make repeated joint training costly','Background',None,None,50),
 ('Can task-by-task RLVR match joint training?','Background',None,None,45),
 ('An environment, a diagnosis, and a method','',None,None,40),
 ('CRG makes continual RLVR an executable environment','Environments',None,None,65),
@@ -39,6 +39,11 @@ def assert_slide_story(prs):
         for x in s.shapes:
             if x.name.startswith(('chapter-navigation:','result-question:')):assert x.top<titles[0].top
         body='\n'.join(x.text for x in s.shapes if x.has_text_frame)
-        if row['chapter']=='Background':assert all(x not in body for x in ['Continual Prompt Replay','CPR','replay previous'])
+        if row['chapter']=='Background':
+            assert all(x not in body for x in ['Continual Prompt Replay','CPR','replay previous'])
+            illustrations=[x for x in s.shapes if x.name.startswith('background-illustration:')]
+            assert len(illustrations)==1, 'Background needs an explanatory visual, not just text boxes'
+            assert illustrations[0].width*illustrations[0].height > prs.slide_width*prs.slide_height*.40
+            assert len(body.split())<70, 'Background prose must not replace the visual'
         assert not any(x in body.lower() for x in ['evidence version','multi-seed','illustrative only','frozen task executor','camp-ii'])
     assert STORY[-1]['title']=='Takeaways'

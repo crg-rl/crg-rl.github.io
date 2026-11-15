@@ -20,6 +20,7 @@ def run():
         def mutate(name,fn):
             p=r/(BASE+'.pptx');raw=p.read_bytes();deck=Presentation(p);fn(deck);deck.save(p);test(name,not check(r)['passed']);p.write_bytes(raw)
         mutate('Missing result design line is rejected',lambda d:setattr(next(s for s in d.slides[11].shapes if s.name.startswith('experiment-design:')),'text',''))
+        mutate('Background visual omission is rejected',lambda d:setattr(next(s for s in d.slides[2].shapes if s.name.startswith('background-illustration:')),'name','missing-background'))
         mutate('Title drift is rejected',lambda d:setattr(next(s for s in d.slides[8].shapes if s.name=='slide-title'),'text','Changed headline'))
         mutate('Off-page text is rejected',lambda d:setattr(next(s for s in d.slides[1].shapes if s.name=='slide-title'),'left',-100000))
         p=r/'assets/slides/figures/case.pdf';raw=p.read_bytes();p.write_bytes(raw+b'changed');test('Source figure drift is rejected',not check(r)['passed']);p.write_bytes(raw)

@@ -8,7 +8,7 @@ Talk structure · 25 s
 ## 02 · Roadmap
 Talk structure · 20 s
 
-## 03 · New capabilities arrive after deployment
+## 03 · New tasks make repeated joint training costly
 Background · 50 s
 
 ## 04 · Can task-by-task RLVR match joint training?
